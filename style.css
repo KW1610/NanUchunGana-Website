@@ -704,10 +704,10 @@ button {
     padding: 60 px 0; /* Базовые отступы */
 
     background-image:
-        url('left_corner.png'),
-        url('right_corner.png'),
-        url('left_corner1.png'),
-        url('right_corner1.png');
+        url('img/left_corner.png'),
+        url('img/right_corner.png'),
+        url('img/left_corner1.png'),
+        url('img/right_corner1.png');
     background-repeat: no-repeat;
     background-size: 100px 100px; /* Размер узоров */
 
