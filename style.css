@@ -1,0 +1,772 @@
+/* Базовые стили и переменные */
+:root {
+    --primary-bg-color: #fdf5e6; /* Примерный бежевый фон */
+    --secondary-bg-color: #fff;
+    --accent-color: #f7d84b; /* Примерный желтый */
+    --text-color: #333;
+    --heading-color: #5a3a2e; /* Примерный коричневый для заголовков */
+    --border-color: #e0cba8; /* Примерный цвет рамки */
+    --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--heading-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+.section {
+    padding: 60px 0;
+}
+
+/* Декоративные секции (с узорами по углам) */
+.decorated-section {
+    background-color: var(--secondary-bg-color); /* Или основной фон */
+    border: 1px solid var(--border-color); /* Простая рамка как плейсхолдер */
+    border-radius: 10px; /* Небольшое скругление */
+    margin: 20px auto;
+    position: relative;
+    /* Для добавления узоров через ::before/::after потребуются SVG или фоновые изображения */
+    /* Пример с псевдоэлементами (требует настройки):
+    &::before, &::after { content: ''; position: absolute; width: 50px; height: 50px; background: url('corner-pattern.svg') no-repeat; }
+    &::before { top: 10px; left: 10px; }
+    &::after { bottom: 10px; right: 10px; transform: rotate(180deg); } */
+}
+
+
+/* Бар входа */
+.login-bar {
+    background-color: #333;
+    color: white;
+    padding: 5px 0;
+    text-align: right; /* Пример */
+}
+.login-bar a {
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Шапка */
+.header {
+    background-color: var(--secondary-bg-color); /* Может отличаться */
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Примерная высота */
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 25px;
+}
+
+.navigation a {
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+/* Секция Hero */
+.hero {
+    padding: 40px 0;
+    /* Фон можно добавить здесь */
+}
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hero-bin {
+    max-width: 150px; /* Примерный размер */
+}
+
+/* Секция "О Нас" */
+.about-section {
+    background-color: var(--primary-bg-color); /* Фон совпадает с body */
+    border: none; /* Убираем рамку, если фон такой же */
+    text-align: center;
+}
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+/* Статистика */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 180px;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+.stat-label {
+    display: block;
+    font-size: 1em;
+    color: var(--heading-color);
+    margin-top: 5px;
+}
+
+/* Секция "Партнеры" */
+.partners-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.partner-logo {
+    text-align: center;
+}
+.partner-logo img {
+    display: block;
+    height: 80px; /* Пример */
+    margin: 0 auto 10px auto;
+}
+.partner-logo.placeholder {
+    width: 100px; /* Пример */
+    height: 100px;
+    background-color: #eee;
+    border: 1px dashed var(--border-color);
+    border-radius: 50%; /* Круглый плейсхолдер */
+}
+.partner-logo span {
+    font-weight: bold;
+}
+
+/* Секция "Команда" */
+.team-section {
+    min-height: 200px; /* Примерная высота для пустого блока */
+}
+.team-members {
+    text-align: center;
+    /* Стили для карточек команды */
+}
+
+/* Секция "Масштаб" */
+.scale-section p {
+    text-align: center;
+    margin: 5px 0;
+}
+.map-container-div {
+    height: 450px; /* ОБЯЗАТЕЛЬНО задайте высоту, иначе карта не будет видна */
+    width: 100%; /* Ширина карты */
+    max-width: 800px; /* Максимальная ширина, как у старой картинки */
+    margin: 0 auto; /* Центрирование блока карты */
+    border: 1px solid var(--border-color); /* Рамка как у старой картинки */
+    border-radius: 5px; /* Скругление углов рамки */
+    background-color: #eee; /* Цвет фона на время загрузки карты */
+}
+
+/* Секция "Контакты" */
+.contact-section {
+    background-color: var(--accent-color);
+    padding: 40px 0;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contact-text {
+    flex-basis: 40%; /* Примерное распределение */
+}
+.contact-text h3 {
+    text-align: left;
+    color: var(--heading-color);
+}
+.contact-form {
+    flex-basis: 55%; /* Примерное распределение */
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Для мобильных */
+}
+.contact-form input[type="text"],
+.contact-form input[type="tel"] {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    flex-grow: 1; /* Занимают доступное место */
+}
+.submit-button {
+    background-color: var(--heading-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap; /* Предотвратить перенос текста */
+}
+
+/* Подвал */
+.footer {
+    background-color: var(--secondary-bg-color); /* Может отличаться */
+    padding: 40px 0 20px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+    color: var(--text-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo img {
+    height: 40px; /* Пример */
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 15px;
+    color: var(--heading-color);
+    font-size: 1em;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a,
+.footer-contact a,
+.footer-contact p {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.footer-social a {
+    margin-right: 10px;
+}
+.footer-social img {
+    height: 24px; /* Размер иконок */
+    width: 24px;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navigation ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .navigation li {
+        margin: 5px 10px;
+    }
+
+    /* Стили для блока статистики (2x2) */
+    .stats-container {
+        gap: 15px;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .stat-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(50% - 8px);
+        min-width: 130px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+     .stat-number {
+        font-size: 2.2em;
+    }
+    .stat-label {
+        font-size: 0.85em;
+    }
+
+    /* Стили для партнеров (2x2) */
+    .partners-logos {
+        gap: 20px;
+        justify-content: center;
+    }
+    .partner-logo {
+        flex-basis: calc(50% - 15px);
+        min-width: 130px;
+    }
+     .partner-logo img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+     }
+
+    /* Стили для формы контактов (в столбик) */
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-text h3 {
+        text-align: center;
+    }
+    .contact-form {
+       width: 100%;
+       flex-direction: column;
+       align-items: center;
+       gap: 10px;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"] {
+        width: 90%;
+        max-width: 400px;
+    }
+     .submit-button {
+         align-self: center;
+     }
+
+    /* --- НОВЫЕ СТИЛИ ДЛЯ FOOTER (ДЛЯ РАСПОЛОЖЕНИЯ В РЯД) --- */
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap; /* Оставляем - разрешает перенос */
+        justify-content: space-between; /* Распределяем пространство */
+        align-items: flex-start; /* Выравниваем по верху */
+        gap: 20px 0; /* Вертикальный отступ между строками, 0 горизонтальный */
+    }
+
+    .footer-logo {
+        flex-basis: 100%; /* Логотип занимает всю первую строку */
+        text-align: center; /* Центрируем логотип */
+        margin-bottom: 10px; /* Небольшой отступ вниз */
+    }
+
+    .footer-links,
+    .footer-contact {
+        /* Делаем эти два блока по ~50% ширины */
+        flex-basis: calc(50% - 10px); /* Расчет для 2 колонок (при gap: 20px между ними) */
+        min-width: 150px; /* Минимальная ширина */
+        text-align: left; /* Выравнивание текста влево */
+        box-sizing: border-box; /* Учитываем padding/border в ширине */
+        padding: 0 5px; /* Небольшой внутренний отступ по бокам */
+    }
+     .footer-links ul {
+        margin-bottom: 0;
+        padding-left: 0; /* Убираем отступ списка */
+        list-style: none; /* Убираем маркеры списка */
+     }
+     .footer-contact p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+     }
+     /* Заголовки H4 в футере на мобильных */
+     .footer-links h4,
+     .footer-contact h4 {
+         margin-bottom: 10px; /* Уменьшаем отступ */
+         font-size: 1em; /* Можно сделать чуть меньше */
+     }
+
+    .footer-social {
+        flex-basis: 100%; /* Соцсети занимают всю последнюю строку */
+        text-align: center; /* Центрируем иконки */
+        margin-top: 10px; /* Небольшой отступ сверху */
+    }
+     .footer-social a {
+         margin: 0 8px; /* Отступы между иконками соцсетей */
+     }
+    /* --- КОНЕЦ НОВЫХ СТИЛЕЙ ДЛЯ FOOTER --- */
+
+
+     /* Стили для Hero Section */
+     .hero {
+        min-height: 250px;
+        padding-bottom: 80px;
+     }
+     .hero-bin {
+        width: 120px;
+        bottom: -20px;
+     }
+     .hero-bin-left {
+         left: 2%;
+     }
+     .hero-bin-right {
+         right: 2%;
+     }
+
+     /* Стили для карты */
+     .map-container-div {
+         height: 350px;
+     }
+     .map-banner {
+         padding: 10px 20px;
+         font-size: 0.9em;
+     }
+     .scale-description {
+        padding: 15px;
+     }
+      .scale-description p {
+        font-size: 1.05em;
+    }
+
+} /* КОНЕЦ БЛОКА @media (max-width: 768px) */
+
+.hero {
+    padding: 20px 0 100px 0; /* Отступы сверху/снизу. Нижний отступ больше из-за бинов */
+    min-height: 350px; /* Минимальная высота секции, чтобы было место */
+    position: relative; /* Необходимо для абсолютного позиционирования дочерних элементов */
+    background-color: var(--primary-bg-color); /* Используем основной фон */
+    overflow: hidden; /* Чтобы повернутые изображения не вылезали за пределы секции */
+}
+
+/* Убираем стили flex для .hero-container, если он был, т.к. мы его убрали из HTML этой секции */
+/* Если есть .hero-container { display: flex; ... }, удалите или закомментируйте */
+
+.hero-bin {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: -30px;      /* Немного опускаем вниз, чтобы часть была за краем */
+    width: 180px;       /* Ширина контейнера, подберите по вашему изображению */
+    height: auto;
+    z-index: 10;        /* На всякий случай поверх других элементов */
+}
+
+.hero-bin-left {
+    left: 5%;           /* Отступ слева (можно использовать px) */
+    transform: rotate(-15deg); /* Угол наклона влево */
+}
+
+.hero-bin-right {
+    right: 5%;          /* Отступ справа (можно использовать px) */
+    transform: rotate(15deg);  /* Угол наклона вправо */
+}
+
+/* Адаптация для Hero Section (Пример) */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 250px;
+        padding-bottom: 80px;
+    }
+    .hero-bin {
+        width: 120px; /* Уменьшаем размер бинов на мобильных */
+        bottom: -20px;
+    }
+    .hero-bin-left {
+        left: 2%;
+    }
+    .hero-bin-right {
+        right: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 200px;
+        padding-bottom: 60px;
+    }
+    .hero-bin {
+        width: 90px;
+        bottom: -15px;
+    }
+     .hero-bin-left {
+        left: -5px; /* Можно немного сдвинуть за край */
+    }
+    .hero-bin-right {
+        right: -5px; /* Можно немного сдвинуть за край */
+    }
+}
+.scale-section .container {
+    text-align: center;
+}
+
+/* Стили для блока описания */
+.scale-description {
+    text-align: center; /* Убедимся, что текст по центру */
+    margin: 20px auto 30px auto; /* Отступы сверху/снизу и авто по бокам для центрирования */
+    padding: 20px; /* Внутренние отступы для воздуха */
+    max-width: 600px; /* Ограничим ширину для лучшей читаемости */
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+    border-radius: 8px; /* Слегка скруглим углы */
+    border-left: 4px solid var(--accent-color); /* Добавим акцентную полосу слева */
+    border-right: 4px solid var(--accent-color); /* Добавим акцентную полосу справа */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Легкая тень */
+}
+
+.scale-description p {
+    margin: 10px 0; /* Отступы между строками */
+    font-size: 1.15em; /* Немного увеличим шрифт */
+    color: var(--heading-color); /* Используем цвет заголовков для важности */
+    line-height: 1.5; /* Улучшим межстрочный интервал */
+}
+
+/* Выделяем цифры (если хотите) */
+.scale-description p strong { /* Нужно будет обернуть цифры в <strong> в HTML */
+    color: #d9534f; /* Пример: выделить красным */
+    font-size: 1.2em;
+}
+
+
+/* Обновленные стили для плашки над картой */
+.map-banner {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--heading-color);
+    padding: 12px 35px; /* Увеличим отступы */
+    font-weight: 700; /* Сделаем жирнее */
+    text-transform: uppercase; /* Все буквы заглавные */
+    letter-spacing: 0.5px; /* Небольшой разрядка букв */
+
+    /* --- Объединение с картой --- */
+    margin-bottom: 0; /* Убираем нижний отступ */
+    border-radius: 8px 8px 0 0; /* Скругляем ТОЛЬКО верхние углы */
+    border: 1px solid var(--border-color); /* Добавляем рамку */
+    border-bottom: none; /* Убираем нижнюю рамку, она будет у карты */
+    position: relative; /* Для z-index */
+    z-index: 2; /* Ставим поверх рамки карты */
+    margin-left: auto; /* Центрирование */
+    margin-right: auto; /* Центрирование */
+    /* Убедимся, что элемент блочный или inline-block для центрирования через margin: auto */
+     display: block; /* Делаем блочным для max-width и margin: auto */
+     max-width: 800px; /* Та же ширина, что и у карты */
+     box-sizing: border-box; /* Чтобы padding не влиял на общую ширину */
+}
+
+/* Обновленные стили для контейнера карты */
+.map-container-div {
+    height: 450px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Убираем верхний отступ, оставляем центрирование */
+    border: 1px solid var(--border-color);
+    /* --- Объединение с плашкой --- */
+    border-radius: 0 0 8px 8px; /* Скругляем ТОЛЬКО нижние углы */
+    /* border-top: none; */ /* Можно убрать верхнюю рамку, если она дублирует нижнюю рамку плашки */
+    position: relative;
+    z-index: 1; /* Ниже чем плашка */
+}
+
+/* --- Конец обновленных стилей для Scale Section --- */
+
+/* --- Стили для секции Партнеры --- */
+
+.partners-section {
+    /* Убедитесь, что есть отступы и т.д. */
+    /* Стили для .decorated-section (с уголками) уже должны быть настроены */
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: space-around; /* Распределяет логотипы по ширине */
+    align-items: flex-start; /* Выравнивание по верху (важно из-за текста под лого) */
+    flex-wrap: wrap; /* Позволяет переноситься на мобильных */
+    gap: 30px; /* Пространство между блоками логотипов */
+    margin-top: 40px; /* Отступ от заголовка */
+}
+
+.partner-logo {
+    text-align: center; /* Центрирует текст под логотипом */
+    flex-basis: 180px; /* Примерная базовая ширина для каждого блока партнера */
+    flex-grow: 0; /* Не растягивать */
+}
+
+.partner-logo img {
+    display: block;
+    width: 130px;  /* Фиксированная ширина круга */
+    height: 130px; /* Фиксированная высота круга */
+    border-radius: 50%; /* Делает изображение круглым */
+    margin: 0 auto 15px auto; /* Центрирует лого и добавляет отступ снизу до текста */
+    object-fit: contain; /* Вписывает логотип внутрь круга, сохраняя пропорции. Подходит для большинства логотипов на скриншоте */
+    /* object-fit: cover; */ /* Если нужно, чтобы картинка заполняла круг (для 'Лесной', 'Блок Питания' может подойти лучше, но может обрезать лого) */
+    background-color: var(--secondary-bg-color); /* Белый фон для прозрачных PNG или лого меньше круга */
+    border: 3px solid var(--accent-color); /* Желтая рамка вокруг круга */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Легкая тень для объема */
+    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.partner-logo img:hover {
+    transform: scale(1.05); /* Слегка увеличить при наведении */
+}
+
+.partner-logo span {
+    font-weight: bold;
+    color: var(--heading-color); /* Цвет как у заголовков */
+    font-size: 0.95em;
+}
+
+/* Убираем стили для плейсхолдеров, если они были */
+/*
+.partner-logo.placeholder { ... }
+*/
+
+/* Адаптация для мобильных (внутри @media) */
+@media (max-width: 768px) {
+    /* ... другие стили ... */
+    .partners-logos {
+        gap: 20px; /* Уменьшаем отступ */
+        justify-content: center; /* Центрируем */
+    }
+    .partner-logo {
+        flex-basis: calc(50% - 15px); /* По два партнера в ряд на мобильных */
+        min-width: 130px; /* Мин. ширина */
+    }
+     .partner-logo img {
+        width: 100px; /* Уменьшаем размер лого */
+        height: 100px;
+        margin-bottom: 10px; /* Уменьшаем отступ */
+     }
+}
+
+/* Альтернатива: 4 угла через multiple backgrounds (применить к .scale-section и т.д.) */
+.scale-section, .partners-section, .team-section {
+    position: relative; /* На всякий случай */
+    padding: 60 px 0; /* Базовые отступы */
+
+    background-image:
+        url('left_corner.png'),
+        url('right_corner.png'),
+        url('left_corner1.png'),
+        url('right_corner1.png');
+    background-repeat: no-repeat;
+    background-size: 100px 100px; /* Размер узоров */
+
+    /* СЛОЖНОЕ ПОЗИЦИОНИРОВАНИЕ: */
+    /* Нужно рассчитать отступы относительно краев окна и ширины контейнера */
+    /* Примерные значения, требующие точной подгонки! */
+    background-position:
+        left 1vw top 20px,     /* TL */
+        right 1vw top 20px,    /* TR */
+        left 1vw bottom 20px,  /* BL */
+        right 1vw bottom 20px; /* BR */
+}
+
+/* Стили для секции "О Нас" */
+.about-section, .hero{
+    /* --- Добавляем стили для создания рамки/блока --- */
+    background-color: var(--secondary-bg-color); /* Белый фон */
+    border: 1px solid var(--border-color);       /* Рамка */
+    border-radius: 10px;                         /* Скругление углов */
+    margin-top: 20px;                            /* Внешний отступ сверху */
+    margin-bottom: 20px;                         /* Внешний отступ снизу */
+    /* margin-left: auto; */ /* Центрирование по горизонтали обычно не нужно, если есть .container внутри */
+    /* margin-right: auto; */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);     /* Легкая тень (опционально) */
+    /* --- Конец стилей для рамки/блока --- */
+
+    /* Оставляем или добавляем внутренние отступы, если нужно */
+    /* padding: 60px 20px; (Если не наследуется от .section) */
+
+    /* Убедитесь, что старые стили не конфликтуют */
+    /* Например, если было 'border: none;', его нужно убрать */
+
+    text-align: center; /* Остальные стили для этой секции */
+}
+
+/* Убедитесь, что у параграфа внутри есть отступы и ширина */
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Центрирование и отступ снизу */
+    /* text-align: center; */ /* Наследуется от .about-section */
+}
+
+.team-section {
+    /* Могут быть стили для фона или отступов секции */
+    padding-bottom: 60px; /* Убедимся, что есть отступ снизу */
+}
+
+.team-group-photo {
+   display: block; /* Чтобы работали auto-margin */
+   width: 100%; /* Ширина фото будет подстраиваться под контейнер */
+   max-width: 900px; /* Максимальная ширина фото, чтобы не было слишком большим на десктопе */
+   margin: 40px auto 0 auto; /* Отступ сверху от заголовка H2 и центрирование по горизонтали */
+   border-radius: 10px; /* Слегка скруглим углы фото */
+   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Тень для фото */
+   border: 5px solid white; /* Белая рамка вокруг фото (опционально) */
+}
+
+
+
+
+
+

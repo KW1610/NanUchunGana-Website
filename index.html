@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НАН ҮЧҮН ГАНА - Проект по сбору хлеба</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="main_logo.png" alt="Логотип НАН ҮЧҮН ГАНА">
+                </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about">О ПРОЕКТЕ</a></li>
+                    <li><a href="#partners">СОТРУДНИЧЕСТВО</a></li>
+                    <li><a href="#team">КОМАНДА</a></li>
+                    <li><a href="#scale">МАСШТАБ</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button">Связаться с нами</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="bin_left.png" alt="Желтый контейнер НАН ҮЧҮН ГАНА слева" class="hero-bin hero-bin-left">
+            <img src="bin_right.png" alt="Желтый контейнер НАН ҮЧҮН ГАНА справа" class="hero-bin hero-bin-right">
+        </section>
+
+            <section id="scale" class="section scale-section decorated-section">
+                <div class="container">
+                    <h2>МАСШТАБ</h2>
+                    <div class="scale-description">
+                            <p>638 бочек по всему Кыргызстану.</p>
+                            <p>32 города и района участвуют в сборе хлеба.</p>
+                            <p>Более 12 000 кг хлеба спасено за год.</p>
+                    </div>
+                    <div class="map-banner">
+                        НАШИ БОЧКИ НА КАРТЕ
+                    </div>
+                    <div id="map-interactive" class="map-container-div">
+                        </div>
+                    <script src="https://mapgl.2gis.com/api/js/v1"></script>
+                    <script src="map.js"></script>
+                </div>
+            </section>
+        <section id="about" class="section about-section decorated-section">
+            <div class="container">
+                <h2>О НАС</h2>
+                <h3>НАН ҮЧҮН ГАНА</h3>
+                <p>
+                    ПРОЕКТ НАПРАВЛЕН НА СОКРАЩЕНИЕ ПИЩЕВОГО ЗАГРЯЗНЕНИЯ (ХЛЕБА) ПУТЕМ УСТАНОВКИ СПЕЦИАЛЬНЫХ БОЧЕК ДЛЯ ВЫБРОСА ХЛЕБА В НЕГО. ДАЛЕЕ, КАК ТОЛЬКО БОЧКА НАПОЛНЯЕТСЯ, ТО СОТРУДНИКИ ТАЗАЛЫК ИЛИ ЖЕ БЕНЕФИЦИАР СОБИРАЕТ ВЕСЬ ХЛЕБ С БОЧЕК, ДАЛЕЕ ОН ПРИВОЗИТ ЕГО В ЦЕХ ДЛЯ СОРТИРОВКИ, ПЕРЕРАБОТКИ, ГРАНУЛЯЦИИ И ИЗМЕЛЬЧЕНИЯ, ДЕЛАЯ ИЗ НЕГО УНИКАЛЬНЫЙ КОМБИКОРМ ДЛЯ СКОТА. ТАКИМ ОБРАЗОМ МЫ ДАЁМ 2 ЖИЗНЬ ДЛЯ ХЛЕБА: ИСПОРЧЕННОГО, ОТКУШЕННОГО, ЗАПЛЕСНЕВЕЛОГО, ГРЯЗНОГО, ЛЮБЫМ ХЛЕБОБУЛОЧНЫМ ИЗДЕЛИЯМ И ТД.
+                </p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">7M</span>
+                        <span class="stat-label">Доход проекта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7M</span>
+                        <span class="stat-label">Собрано хлеба</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">638</span>
+                        <span class="stat-label">Установлено бочек</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7M</span>
+                        <span class="stat-label">Произведено корма</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="section partners-section decorated-section">
+            <div class="container">
+                <h2>НАШИ ПАРТНЕРЫ</h2>
+                <div class="partners-logos">
+
+                    <div class="partner-logo">
+                        <img src="images/logo_tazalyk.png" alt="Логотип Тазалык">
+                        <span>ТАЗАЛЫК</span>
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/logo_blok_pitania.png" alt="Логотип Блок Питания">
+                        <span>БЛОК ПИТАНИЯ</span>
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/logo_lesnoy.png" alt="Логотип Лесной Cafe-Bar">
+                        <span>ЛЕСНОЙ</span>
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="images/logo_ants_coffee.png" alt="Логотип Ants Coffee">
+                        <span>ANTS COFFEE</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section team-section">
+            <div class="container">
+               <h2>НАША КОМАНДА</h2>
+
+               <img src="team_photo.png" alt="Общее фото команды НАН ҮЧҮН ГАНА" class="team-group-photo">
+               </div>
+       </section>
+
+        <section id="contact" class="section contact-section">
+             <div class="container contact-container">
+                <div class="contact-text">
+                    <h3>Хотите сотрудничать или задать вопрос?</h3>
+                </div>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <button type="submit" class="submit-button">ОСТАВИТЬ ЗАЯВКУ &rarr;</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                 <img src="main_logo.png" alt="Логотип НАН ҮЧҮН ГАНА">
+            </div>
+            <div class="footer-links">
+                <h4>О НАС</h4>
+                <ul>
+                    <li><a href="#partners">ПАРТНЕРЫ</a></li>
+                    <li><a href="#team">КОМАНДА</a></li>
+                    <li><a href="#scale">МАСШТАБ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
+                <p>Телефон: <a href="tel:+996XXXXXXXXX">+996 501 518 904</a></p>
+                <p>Почта: <a href="mailto:yourmail@gmail.com">kanatturusbaev245@gmail.com</a></p>
+            </div>
+            <div class="footer-social">
+                 <a href="#" aria-label="WhatsApp"><img src="icon_whatsapp.png" alt="WhatsApp"></a>
+                 <a href="#" aria-label="Instagram"><img src="icon_instagram.png" alt="Instagram"></a>
+                 </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+        
