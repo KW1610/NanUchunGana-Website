@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // URL иконки для маркеров
-        const iconUrl = 'mapsign.png'; // Иконка хлеба
+        const iconUrl = 'img/mapsign.png';
 
         // Координаты маркеров (точек сбора)
         const markersData = [
