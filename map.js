@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const map = new mapgl.Map('map-interactive', { // Используем ID нашего div
             center: [74.58402137760633, 42.84654296969603], // Координаты центра (Бишкек)
             zoom: 13, // Уровень масштабирования
-            key: '2a05a139-556e-4871-b4ec-ce47db39dfb6', // Ваш API ключ 2GIS
+            key: 'ece52447-f2cb-41b6-b94b-ed5d8ab7cfe7', // Ваш API ключ 2GIS
         });
 
         // URL иконки для маркеров
